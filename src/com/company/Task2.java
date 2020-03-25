@@ -8,8 +8,6 @@ public class Task2 {
 
             double S = p * r * r;
             System.out.println(S);
-            System.out.println(p);
-
 
         }
     }
