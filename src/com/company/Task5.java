@@ -7,7 +7,7 @@ public class Task5 {
 
     private String catName;
     private String catFood;
-    private String catDrink;
+    private String catDrink = "Milk";
     String weekDay;
     private boolean hungry;
     private boolean dishEmpty;
@@ -26,7 +26,7 @@ public class Task5 {
 
     public void setCatFood(String catFood) {
         this.catFood = catFood;
-        System.out.println("Mmm today it will be tasty, " + catFood);
+        System.out.println("Today it will be tasty " + catFood);
     }
 
     public String getCatFood() {
@@ -59,7 +59,6 @@ public class Task5 {
     }
 
     public void addFoodToDishOn(String weekDay) {
-        this.catDrink = catDrink;
         if (isHungry()) {
             this.weekDay = weekDay;
             if (this.weekDay == "Monday" || this.weekDay == "Thursday") {
@@ -72,7 +71,7 @@ public class Task5 {
                 setCatFood("Optima");
             }
             else if (this.weekDay== "Sunday"){
-                setCatDrink(catDrink);
+//                setCatDrink(catDrink);
                 System.out.println("Let me pour you some " + catDrink);
             }
 
