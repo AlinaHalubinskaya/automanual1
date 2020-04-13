@@ -10,6 +10,7 @@ public class Task6 {
         lunchTime.callCatToTheKitchen("Pushok");
         lunchTime.setHungry(true);
         lunchTime.addFoodToDishOn("Monday");
+        lunchTime.addFoodToDishOn("Sunday");
 
     }
 }
