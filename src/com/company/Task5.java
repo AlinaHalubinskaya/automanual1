@@ -26,7 +26,7 @@ public class Task5 {
 
     public void setCatFood(String catFood) {
         this.catFood = catFood;
-        System.out.println("Mmm tasty, " + catFood);
+        System.out.println("Mmm today it will be tasty, " + catFood);
     }
 
     public String getCatFood() {
