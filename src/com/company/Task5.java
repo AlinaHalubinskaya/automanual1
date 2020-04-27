@@ -6,18 +6,26 @@ public class Task5 {
 
     public static void main(String[] args) {
     }
+    static{
+        System.out.println("The guide on how to feed your cat");
+    }
 
-    protected String catName;
-    protected static String[] catFood = {"KittyCat", "Farmina", "Optima"};
-    private int[] foodBox = {900, 600, 1200};
-    private int indexBox;
-    private String catDrink = "Milk";
-    private int drinkBottle = 750;
+    public Task5(){
+        catDrink = "Milk";
+        drinkBottle= 750;
+    }
+
+    String catName;
+    protected String[] catFood = {"KittyCat", "Farmina", "Optima"};
+    protected int[] foodBox = {900, 600, 1200};
+    protected int indexBox;
+    protected String catDrink;
+    protected int drinkBottle;
     private String weekDay;
     private boolean hungry;
     private boolean dishEmpty;
-    private int dish = 300;
-    private String value;
+    protected int dish = 300;
+    protected String value;
 
     public void setName(String name) {
         this.catName = name;

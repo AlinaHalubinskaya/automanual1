@@ -1,6 +1,6 @@
 package com.company;
 
-public class Main {
+public class Task0 {
 
     public static void main(String[] args) {
         System.out.println("Крошка моя, я по тебе скучаю\n" +
