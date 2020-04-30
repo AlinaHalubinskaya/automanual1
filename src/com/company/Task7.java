@@ -7,6 +7,16 @@ public class Task7 extends Task5 {
     public static void main(String[] args) {
     }
 
+    String[] catFood;
+    private int[] foodBox;
+    private int dish;
+
+    {
+        catFood = new String[]{"Porridge", "Sausages", "Sour cream"};
+        foodBox = new int[] {500, 300, 600};
+        dish = 400;
+    }
+
     public Task7() {
         super();
         super.catFood = this.catFood;
@@ -15,13 +25,16 @@ public class Task7 extends Task5 {
         System.out.println("Specifics of Siamese cats. Here we will use same drinks as in Task5");
     }
 
-    String[] catFood = {"Porridge", "Sausages", "Sour cream"};
-    private int[] foodBox = {500, 300, 600};
-    private int dish = 400;
-
     @Override
     public void isFoodBoxEmpty() {
         super.isFoodBoxEmpty();
+    }
+
+    @Override
+    public String getValue() {
+        System.out.println("The value is returned from parent" + super.value);
+        return super.getValue();
+
     }
 
     @Override
