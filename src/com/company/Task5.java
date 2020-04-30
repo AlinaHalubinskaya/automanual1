@@ -2,17 +2,18 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Task5 {
+public class Task5 implements Task8, Task9 {
 
     public static void main(String[] args) {
     }
-    static{
+
+    static {
         System.out.println("The guide on how to feed your cat");
     }
 
-    public Task5(){
+    public Task5() {
         catDrink = "Milk";
-        drinkBottle= 750;
+        drinkBottle = 750;
     }
 
     String catName;
@@ -35,6 +36,7 @@ public class Task5 {
         return catName;
     }
 
+    @Override
     public void setCatFood(String catFood) {
         for (int i = 0; i <= this.catFood.length; i++) {
             if (this.catFood[i] == catFood) {
@@ -55,11 +57,17 @@ public class Task5 {
         return value;
     }
 
+    @Override
+    public boolean isDishEmpty() {
+        return dishEmpty;
+    }
+
     public static void callCatToTheKitchen(String catName) {
         System.out.println("Mommy has brought you some food, " + catName);
 
     }
 
+    @Override
     public void chooseFood(String weekDay, boolean hungry) {
         if (hungry) {
             this.weekDay = weekDay;
@@ -80,6 +88,7 @@ public class Task5 {
         }
     }
 
+    @Override
     public void isFoodBoxEmpty() {
         for (int i = 0; i < this.catFood.length; i++) {
             if (this.catFood[i] == value) {
@@ -91,6 +100,7 @@ public class Task5 {
         }
     }
 
+    @Override
     public int addFoodToDish() {
         int boxTotal = this.foodBox[this.indexBox];
         Scanner scanner = new Scanner(System.in);
@@ -108,6 +118,7 @@ public class Task5 {
         }
     }
 
+    @Override
     public int addDrinkToDish() {
         int bottleTotal = this.drinkBottle;
         Scanner scanner = new Scanner(System.in);
@@ -147,6 +158,18 @@ public class Task5 {
             chooseFood(weekDay, hungry);
         }
     }
+
+    @Override
+    public void washDish(boolean dishEmpty){
+        if (dishEmpty) {
+            System.out.println("This dish needs washing");
+    }
+        else{
+            System.out.println("Thanks God I do not need to wash the dish");
+        }
+
+    }
+
 }
 
 
