@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Task5 implements Task8, Task9 {
+public class Task5 extends MyExceptions implements Task8, Task9 {
 
     public static void main(String[] args) {
     }
@@ -47,9 +47,20 @@ public class Task5 implements Task8, Task9 {
         }
     }
 
-    public int getDrinkBottle() {
+    public int getDrinkBottle() throws MyExceptions {
+        try {
+            if (drinkBottle < 0) {
+                throw new MyExceptions("Invalid bottle volume(negative value).");
+            }
+        } catch (MyExceptions e) {
+            System.out.println("Exception is caught." + e);
+        }
         System.out.println("There is " + drinkBottle + " milk in this bottle");
         return drinkBottle;
+    }
+
+    public void setDrinkBottle(int drinkBottle) {
+        this.drinkBottle = drinkBottle;
     }
 
     public String getValue() {
@@ -137,7 +148,7 @@ public class Task5 implements Task8, Task9 {
     }
 
 
-    public void feedCat(String name, String weekDay, boolean dishEmpty, boolean hungry) {
+    public void feedCat(String name, String weekDay, boolean dishEmpty, boolean hungry) throws MyExceptions {
         if (dishEmpty & hungry & weekDay != "Sunday") {
             chooseFood(weekDay, hungry);
             isFoodBoxEmpty();
@@ -160,11 +171,10 @@ public class Task5 implements Task8, Task9 {
     }
 
     @Override
-    public void washDish(boolean dishEmpty){
+    public void washDish(boolean dishEmpty) {
         if (dishEmpty) {
             System.out.println("This dish needs washing");
-    }
-        else{
+        } else {
             System.out.println("Thanks God I do not need to wash the dish");
         }
 
